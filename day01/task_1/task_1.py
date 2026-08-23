@@ -18,9 +18,9 @@ def parity(num):
 
 def find_max(a):
     var = 0
-    for i in range(len(a)):
-         if a[i]>var:
-             var=a[i]
+    for x in a:
+         if x > var:
+             var = x
     return var
 
 #rand_list = [1, 143, 32, 213, 22]
@@ -88,27 +88,26 @@ def task_10():
     return sum
 
 #print(task_10())
+
 def task_11():
     numbers = [1, 5, 8, 10, 13, 17, 20]
-    up_5, under_18, even = [] , [] , []
+    res = []
     for x in numbers:    
-        if x > 5:
-            up_5.append(x)
-        if x < 18:
-            under_18.append(x) 
-        if x%2 == 0:
-            even.append(x)
-    return up_5, under_18, even
+        if x>5 and x<18 and x%2!=0:
+            res.append(x)         
+    return res
 
 #print(task_11())
 
 def is_prime(num):
-    if num <= 1:
+    if num <= 1 or num==0:
         return False
-    for i in range(num**0.5 + 1):
-        if num%i==0:
+    sqrt=int(num**0.5)
+    for i in range(sqrt-1):
+        if num%(i+2)==0:
             return False
     return True
+
 
 def count_vowels(text):
     vowels = 'aeyuio'

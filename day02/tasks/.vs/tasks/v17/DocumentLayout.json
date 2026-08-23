@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\MyPractice\\python-practice\\task_1\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\MyPractice\\python-practice\\day02\\tasks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6077065C-71EF-459D-9397-7A995586A80F}|task_1.pyproj|C:\\Users\\User\\MyPractice\\python-practice\\task_1\\task_1.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{6077065C-71EF-459D-9397-7A995586A80F}|task_1.pyproj|solutionrelative:task_1.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{1592D9C0-0B18-407F-916A-18B7A23CBEF5}|tasks.pyproj|C:\\Users\\User\\MyPractice\\python-practice\\day02\\tasks\\tasks.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1592D9C0-0B18-407F-916A-18B7A23CBEF5}|tasks.pyproj|solutionrelative:tasks.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "task_1.py",
-              "DocumentMoniker": "C:\\Users\\User\\MyPractice\\python-practice\\task_1\\task_1.py",
-              "RelativeDocumentMoniker": "task_1.py",
-              "ToolTip": "C:\\Users\\User\\MyPractice\\python-practice\\task_1\\task_1.py",
-              "RelativeToolTip": "task_1.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "tasks.py",
+              "DocumentMoniker": "C:\\Users\\User\\MyPractice\\python-practice\\day02\\tasks\\tasks.py",
+              "RelativeDocumentMoniker": "tasks.py",
+              "ToolTip": "C:\\Users\\User\\MyPractice\\python-practice\\day02\\tasks\\tasks.py",
+              "RelativeToolTip": "tasks.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2026-08-22T09:52:11.462Z",
+              "WhenOpened": "2026-08-23T08:23:58.228Z",
               "EditorCaption": ""
             }
           ]
