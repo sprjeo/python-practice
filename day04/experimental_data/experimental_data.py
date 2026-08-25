@@ -21,15 +21,15 @@ def menu(a,b):
         
         if x == 1:
             print(f'Average temperature: {np.mean(b)}\n')
-        if x == 2:
+        elif x == 2:
             print(f'Maximum temperature: {np.max(b)}\n')
-        if x == 3:
+        elif x == 3:
             print(f'Minimum temperature: {np.min(b)}\n')
-        if x == 4:
+        elif x == 4:
             print(f'Time of maximum temperature: {a[np.argmax(b)]}\n')
-        if x == 5:
+        elif x == 5:
             print(f'Times when the temperature was above 25: { ', '.join(map(str,a[np.where(b>25)]))}\n')
-        if x == 6:
+        elif x == 6:
             print('Plot a graph of temperature as a function of time: \n')
             plt.plot(a,b)
             plt.title('temperature as a function of time')
@@ -39,7 +39,7 @@ def menu(a,b):
             plt.text(a[0], np.mean(b), f' Average: {np.mean(b):.2f}', va='bottom', ha='left')
             plt.grid(True)
             plt.show()
-        if x == 0:
+        elif x == 0:
             return
 
 
