@@ -1,0 +1,106 @@
+# Titanic Data Analysis
+
+## About the project
+
+This is a small exploratory data analysis of the Titanic dataset using **Python, Pandas, NumPy and Matplotlib**.
+
+The goal was to explore the dataset, investigate missing values, analyze survival rates and visualize the main findings.
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+
+## Dataset
+
+The analysis uses the Titanic dataset.
+
+The dataset contains information about passengers, including:
+
+- passenger class;
+- sex;
+- age;
+- number of siblings/spouses aboard;
+- number of parents/children aboard;
+- ticket;
+- fare;
+- cabin;
+- port of embarkation;
+- survival status.
+
+## Analysis
+
+### Missing values
+
+The largest percentage of missing values is found in the `Cabin` column — approximately **77%**. This makes the variable difficult to use for analysis without additional preprocessing.
+
+The smallest number of missing values is found in `Embarked` — approximately **0.2%**.
+
+The following columns contain no missing values:
+
+`PassengerId`, `Survived`, `Pclass`, `Name`, `Sex`, `SibSp`, `Parch`, `Ticket`, `Fare`.
+
+### Survival by sex
+
+The survival rate was:
+
+- **Women:** approximately 74.2%
+- **Men:** approximately 18.9%
+
+This shows a substantial difference in survival rates between men and women.
+
+### Survival by passenger class
+
+The survival rate by passenger class was:
+
+- **1st class:** approximately 63.0%
+- **2nd class:** approximately 47.3%
+- **3rd class:** approximately 24.2%
+
+The survival rate decreases as the passenger class becomes lower.
+
+### Average age
+
+The average age was:
+
+- **Men:** approximately 30.7 years
+- **Women:** approximately 27.9 years
+
+### Survival by sex and passenger class
+
+The highest survival rate was observed among **women in 1st class — approximately 96.8%**.
+
+The lowest survival rate was observed among **men in 3rd class — approximately 13.5%**.
+
+## Visualizations
+
+The project includes visualizations showing:
+
+1. Distribution of passengers by sex.
+2. Survival distribution by sex.
+3. Survival distribution by passenger class.
+
+## Conclusions
+
+1. The `Cabin` column contains the largest proportion of missing values (approximately 77%), making it difficult to use without additional preprocessing.
+2. Women had a substantially higher survival rate than men: approximately 74.2% versus 18.9%.
+3. Passengers in higher classes had higher survival rates: approximately 63.0% in 1st class, 47.3% in 2nd class and 24.2% in 3rd class.
+4. The average age of male passengers was higher than that of female passengers.
+5. The highest survival rate was observed among women in 1st class (approximately 96.8%), while the lowest was among men in 3rd class (approximately 13.5%).
+6. Based on this analysis, **sex and passenger class are strongly associated with survival**, and their combination produces even more pronounced differences.
+
+## What I practiced
+
+During this project I practiced:
+
+- loading CSV data with `pandas.read_csv()`;
+- exploring a DataFrame;
+- working with missing values;
+- filtering data;
+- using `groupby()`;
+- calculating averages and proportions;
+- working with multiple grouping variables;
+- creating visualizations with Matplotlib;
+- interpreting analytical results.
