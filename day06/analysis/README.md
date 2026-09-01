@@ -1,4 +1,4 @@
-# Titanic Data Analysis
+﻿# Titanic Data Analysis
 
 ## About the project
 
@@ -34,9 +34,9 @@ The dataset contains information about passengers, including:
 
 ### Missing values
 
-The largest percentage of missing values is found in the `Cabin` column � approximately **77%**. This makes the variable difficult to use for analysis without additional preprocessing.
+The largest percentage of missing values is found in the `Cabin` column — approximately **77%**. This makes the variable difficult to use for analysis without additional preprocessing.
 
-The smallest number of missing values is found in `Embarked` � approximately **0.2%**.
+The smallest number of missing values is found in `Embarked` — approximately **0.2%**.
 
 The following columns contain no missing values:
 
@@ -70,9 +70,9 @@ The average age was:
 
 ### Survival by sex and passenger class
 
-The highest survival rate was observed among **women in 1st class � approximately 96.8%**.
+The highest survival rate was observed among **women in 1st class — approximately 96.8%**.
 
-The lowest survival rate was observed among **men in 3rd class � approximately 13.5%**.
+The lowest survival rate was observed among **men in 3rd class — approximately 13.5%**.
 
 ## Visualizations
 
@@ -91,6 +91,36 @@ The project includes visualizations showing:
 5. The highest survival rate was observed among women in 1st class (approximately 96.8%), while the lowest was among men in 3rd class (approximately 13.5%).
 6. Based on this analysis, **sex and passenger class are strongly associated with survival**, and their combination produces even more pronounced differences.
 
+
+
+## Correlation analysis
+
+### Findings
+
+1. The correlation between *Pclass* and *Survived* has the largest absolute value (and is negative). The correlation is negative because a higher class corresponds to a higher survival rate. This implies that passengers in higher classes were more likely to survive; they likely enjoyed better living and dining conditions, and-crucially-their class status may have given them priority access to lifeboats during the emergency. This aligns with the results obtained using `groupby()`. The negative correlation does not mean that passenger class directly caused deaths; rather, class influenced the passengers' conditions and likely affected their access to rescue and priority status.
+2. The *Fare* < 100 was in high demand. More people aged 10 to 30 could afford a higher fare. The highest fares were paid by a couple of individuals aged 30–40.
+3. Overall, survival rates show little dependence on age; however, the graph suggests that the majority of survivors are slightly younger than the majority of those who perished, even though the median age is higher for the survivors.
+4. Among the survivors, there are many who paid a higher fare. However, the correlation here is not high.
+5. The chart shows that the highest number of *SibSp* values ​​is found among people with 2 *Parch*. Next in terms of count is the group with 1 *Parch*, followed by 0, and then a descending order from 3 to 6.
+6. Older individuals opted for a higher class (could afford a higher class)
+7. The higher the class, the higher the ticket price, accordingly.
+
+
+## Visualizations
+
+The project includes visualizations showing correlation between:
+1. Age and fare
+2. Age and survived
+3. Fare and survived
+4. Parch and sibsp
+5. Age and pclass
+6. Fare and pclass
+
+### Important note
+
+Correlation does not necessarily imply causation.
+
+
 ## What I practiced
 
 During this project I practiced:
@@ -99,8 +129,10 @@ During this project I practiced:
 - exploring a DataFrame;
 - working with missing values;
 - filtering data;
-- using `groupby()`;
+- using `groupby()`, `corr()`;
 - calculating averages and proportions;
 - working with multiple grouping variables;
 - creating visualizations with Matplotlib;
 - interpreting analytical results.
+
+

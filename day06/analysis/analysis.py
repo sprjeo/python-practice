@@ -6,15 +6,6 @@ url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic
 
 df = pd.read_csv(url)
 
-#print(df.head())
-#print(df.shape)
-#print(df.columns)
-#print(df.dtypes)
-#print(df.describe())
-#print(df.info())
-
-#print(df.isna().sum())
-#print(df.isna().mean() * 100)
 
 def analyze_data(df):
     return{
@@ -30,10 +21,6 @@ def analyze_data(df):
         'Average age of each sex' : df.groupby('Sex')['Age'].mean(),
         'Number of survivors by class and sex' : df.groupby(['Sex', 'Pclass'])['Survived'].mean()
         }
-
-
-#for key, value in analyze_data(df).items():
-#    print(f'{key}: \n{value}\n')
 
 
 def visualization(df):
@@ -57,7 +44,50 @@ def visualization(df):
     plt.title('Survival rate based on ticket class')
     plt.show()
 
+   
 
-visualization(df)
-    
+#correlation
+
+
+def visual_corr(df):
+    print(df.corr(numeric_only=True))
+
+    plt.scatter(df['Age'], df['Fare'])
+    plt.title('correlation between age and fare')
+    plt.xlabel('age')
+    plt.ylabel('fare')
+    plt.show()
+
+    plt.scatter(df['Age'], df['Survived'])
+    plt.title('correlation between age and survived')
+    plt.xlabel('age')
+    plt.ylabel('survived')
+    plt.show()
+
+    df.boxplot(column="Age", by="Survived")
+    plt.show()
+
+    plt.scatter(df['Fare'], df['Survived'])
+    plt.title('correlation between fare and survived')
+    plt.xlabel('fare')
+    plt.ylabel('survived')
+    plt.show()
+
+    plt.scatter(df['Parch'], df['SibSp'])
+    plt.title('correlation between parch and sibsp')
+    plt.xlabel('parch')
+    plt.ylabel('sibsp')
+    plt.show()
+
+    df.boxplot(column="Age", by="Pclass")
+    plt.show()
+
+    df.boxplot(column="Fare", by="Pclass")
+    plt.show()
+
+
+visual_corr(df)
+
+
+
 
