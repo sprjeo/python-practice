@@ -86,8 +86,53 @@ def visual_corr(df):
     plt.show()
 
 
-visual_corr(df)
+
+#What to do with missing data
+
+df_drop = df.dropna(subset=["Age"])
+
+# A: dropna. Remove passengers with unknown ages. 
+# advantages: Accurate analyses when working with age.
+# disadvantages: This removes some potentially important data during analysis
+
+df_fill = df.copy()
+df_fill["Age"] = df_fill["Age"].fillna(df_fill["Age"].median())
+
+# B: fillna. Fill unknown ages with the median.
+# advantages: This leaves the data for analysis
+# disadvantages: Age-related analyses may be performed incorrectly
 
 
+
+#Working with columns
+
+
+passengers = df[["Sex", "Age", "Pclass", "Fare", "Survived"]].copy()
+
+
+#Filtration
+
+def filtration(df):
+    return{
+        'Surviving passengers over 70 and under 20' : df[((df['Age'] > 70) | (df['Age'] < 20)) & (df['Survived'] == 1)],
+        'First-class passengers under 18' : df[(df['Age'] < 18) & (df['Pclass'] == 1)],
+        'Single women in first class' : df[(df['SibSp'] == 0) & (df['Parch'] == 0) & (df['Pclass'] == 1)],
+        'Third-class survivors' : df[(df['Pclass'] == 3) & (df['Survived'] == 1)],
+        'Men with fare more than 100' : df[(df['Sex'] == 'male') & (df['Fare'] > 100)]
+        }
+
+
+#print(df.loc[df['Sex'] == 'male', ['Age', 'Fare', 'Survived']])
+
+adult_passengers = df.copy()
+adult_passengers = adult_passengers.loc[
+                    adult_passengers['Age'] >= 18,
+                    ['Sex', 'Age', 'Pclass', 'Fare', 'Survived']]
+
+def surv_rate(df):
+    return{
+       'Survival rate of males and females among adults' : df.groupby('Sex')['Survived'].mean(),
+       'Survival rate for each adult class' : df.groupby('Pclass')['Survived'].mean()
+        }
 
 

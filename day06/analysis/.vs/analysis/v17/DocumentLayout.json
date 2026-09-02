@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\analysis.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|solutionrelative:analysis.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\analysis.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B910096B-92CE-418B-A611-696E7F65D2BC}|analysis.pyproj|solutionrelative:analysis.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,25 +34,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\README.md",
               "RelativeDocumentMoniker": "README.md",
               "ToolTip": "C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\README.md",
               "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAABSAQAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAG8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-08-28T20:57:09.945Z"
+              "WhenOpened": "2026-08-28T20:57:09.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "analysis.py",
               "DocumentMoniker": "C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\analysis.py",
               "RelativeDocumentMoniker": "analysis.py",
               "ToolTip": "C:\\Users\\User\\MyPractice\\python-practice\\day06\\analysis\\analysis.py",
               "RelativeToolTip": "analysis.py",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAADAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAIwIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-08-28T10:18:58.678Z",
               "EditorCaption": ""
