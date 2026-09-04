@@ -6,7 +6,6 @@ url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic
 
 df = pd.read_csv(url)
 
-
 def analyze_data(df):
     return{
         'the largest amount of gaps' :df.isna().sum().idxmax(),
@@ -122,12 +121,13 @@ def filtration(df):
         }
 
 
-#print(df.loc[df['Sex'] == 'male', ['Age', 'Fare', 'Survived']])
-
 adult_passengers = df.copy()
 adult_passengers = adult_passengers.loc[
                     adult_passengers['Age'] >= 18,
                     ['Sex', 'Age', 'Pclass', 'Fare', 'Survived']]
+
+
+#Survival rate analysis
 
 def surv_rate(df):
     return{
@@ -135,4 +135,27 @@ def surv_rate(df):
        'Survival rate for each adult class' : df.groupby('Pclass')['Survived'].mean()
         }
 
+
+def survival_of_passengers(df):
+    return{
+        'Survival rates differ between men and women?' : df.groupby('Sex')['Survived'].mean(),
+        'Survival rates differ between classes?' : df.groupby('Pclass')['Survived'].mean(),
+        'Ages of survivors and those who died' : df.groupby('Survived')['Age'].mean()
+        }
+
+
+
+def survival_visualization(df):
+    grouped = df.groupby(['Pclass', 'Sex'])['Survived'].mean().unstack()
+    plt.plot(grouped.index, grouped['female'],marker='o', label='Female', color='pink')
+    plt.plot(grouped.index, grouped['male'], marker='o', label='Male', color='blue')
+    
+    for x in grouped.index:
+        plt.text(x, grouped['female'][x] + 0.02, f"{grouped['female'][x]:.1%}", ha='center')
+        plt.text(x, grouped['male'][x] + 0.02, f"{grouped['male'][x]:.1%}", ha='center')
+
+    plt.title('Survival rate by sex and passenger class')
+    plt.xticks([1, 2, 3], ['1st Class', '2nd Class', '3rd Class'])
+    plt.ylabel('Survival Rate')
+    plt.show()
 

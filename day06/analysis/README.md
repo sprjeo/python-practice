@@ -81,8 +81,16 @@ The project includes visualizations showing:
 1. Distribution of passengers by sex.
 2. Survival distribution by sex.
 3. Survival distribution by passenger class.
+4. correlation between:
+	1. Age and fare
+	2. Age and survived
+	3. Fare and survived
+	4. Parch and sibsp
+	5. Age and pclass
+	6. Fare and pclass 
+5. Survival rate by sex and passenger class
 
-## Conclusions
+### Conclusions
 
 1. The `Cabin` column contains the largest proportion of missing values (approximately 77%), making it difficult to use without additional preprocessing.
 2. Women had a substantially higher survival rate than men: approximately 74.2% versus 18.9%.
@@ -106,16 +114,6 @@ The project includes visualizations showing:
 7. The higher the class, the higher the ticket price, accordingly.
 
 
-## Visualizations
-
-The project includes visualizations showing correlation between:
-1. Age and fare
-2. Age and survived
-3. Fare and survived
-4. Parch and sibsp
-5. Age and pclass
-6. Fare and pclass
-
 ### Important note
 
 Correlation does not necessarily imply causation.
@@ -126,6 +124,19 @@ Correlation does not necessarily imply causation.
 
 1. It is useful to create a DataFrame with only the columns you need when you do not need all the data for your analysis, or when some columns are missing most of the values.
 2. After I limited the sample to adults, the survival rate changed. The difference between men and women widened even more, favoring women. The picture also changed across classes, with the survival rate for the second and third classes falling by 6 and 4 percent, respectively.
+
+## Survival rate analysis
+
+### Findings
+
+1. Women's survival rate is ~55% higher than men's.
+2. The survival rate varies with increasing class. The lower the class, the lower the survival rate (1 is the highest, then 2, then 3).
+3. The average age of survivors is 28 years, while the average age of those who died is higher—almost 31 years.
+
+#### Output according to plot 'Survival rate by sex and passenger class':
+
+The graph shows that the highest survival rate is for women in first class — 96.8% — while the lowest is for men in third class — 13.5%. Also, as the class deteriorates (from 1 to 3), the survival rate decreases for both sexes. The graph shows a significant difference between the survival rates of the two sexes, with women faring much better.
+
 
 ## What I practiced
 
